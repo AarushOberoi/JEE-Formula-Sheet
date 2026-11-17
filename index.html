@@ -1,0 +1,113 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JEE Formula Sheet</title>
+  <meta name="description" content="JEE Main formula and reaction repository organised by the official syllabus: subject, chapter, topic, formula.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="is-home" data-homebg="1" data-bg="">
+  <!-- Header: hamburger + category nav | centred logo | pill search + icons (mirrors the original UI reference) -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <button class="icon-btn hamburger" id="menuBtn" aria-label="Open chapter menu" aria-controls="drawer" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="cat-nav" aria-label="Subjects">
+          <a href="#/s/physics" data-subject="physics">PHYSICS</a>
+          <a href="#/s/chem" data-subject="chem">CHEMISTRY</a>
+          <a href="#/s/math" data-subject="math">MATHS</a>
+        </nav>
+      </div>
+      <a class="logo" href="#/" aria-label="JEE Formula Sheet — home">
+        <span class="logo-mark" aria-hidden="true">∑</span>
+        <span class="logo-text"><b>JEE</b><i>Formula</i><b>Sheet</b></span>
+      </a>
+      <div class="header-right">
+        <form class="search" id="searchForm" role="search">
+          <input id="searchInput" type="search" placeholder="Search chapters, topics, or formulas..." autocomplete="off" aria-label="Search formulas">
+          <button type="submit" class="search-go" aria-label="Search">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"></circle><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- Slide-out drawer (hamburger) -->
+  <div class="drawer-scrim" id="scrim" hidden=""></div>
+  <aside class="drawer" id="drawer" aria-label="All chapters" aria-hidden="true">
+    <div class="drawer-head">
+      <span>ALL CHAPTERS</span>
+      <button class="icon-btn" id="drawerClose" aria-label="Close menu">✕</button>
+    </div>
+    <div id="drawerBody">
+      <details open=""><summary>PHYSICS</summary>
+        <a href="#/c/physics/1"><span class="u">1</span><span>Units and Measurements</span></a><a href="#/c/physics/2"><span class="u">2</span><span>Kinematics</span></a><a href="#/c/physics/3"><span class="u">3</span><span>Laws of Motion</span></a><a href="#/c/physics/4"><span class="u">4</span><span>Work, Energy and Power</span></a><a href="#/c/physics/5"><span class="u">5</span><span>Rotational Motion</span></a><a href="#/c/physics/6"><span class="u">6</span><span>Gravitation</span></a><a href="#/c/physics/7"><span class="u">7</span><span>Properties of Solids and Liquids</span></a><a href="#/c/physics/8"><span class="u">8</span><span>Thermodynamics</span></a><a href="#/c/physics/9"><span class="u">9</span><span>Kinetic Theory of Gases</span></a><a href="#/c/physics/10"><span class="u">10</span><span>Oscillations and Waves</span></a><a href="#/c/physics/11"><span class="u">11</span><span>Electrostatics</span></a><a href="#/c/physics/12"><span class="u">12</span><span>Current Electricity</span></a><a href="#/c/physics/13"><span class="u">13</span><span>Magnetic Effects of Current and Magnetism</span></a><a href="#/c/physics/14"><span class="u">14</span><span>Electromagnetic Induction and Alternating Currents</span></a><a href="#/c/physics/15"><span class="u">15</span><span>Electromagnetic Waves</span></a><a href="#/c/physics/16"><span class="u">16</span><span>Optics</span></a><a href="#/c/physics/17"><span class="u">17</span><span>Dual Nature of Matter and Radiation</span></a><a href="#/c/physics/18"><span class="u">18</span><span>Atoms and Nuclei</span></a><a href="#/c/physics/19"><span class="u">19</span><span>Electronic Devices</span></a><a href="#/c/physics/20"><span class="u">20</span><span>Experimental Skills</span></a>
+      </details>
+      <details><summary>CHEMISTRY</summary>
+        <a href="#/c/chem/1"><span class="u">1</span><span>Some Basic Concepts in Chemistry</span></a><a href="#/c/chem/2"><span class="u">2</span><span>Atomic Structure</span></a><a href="#/c/chem/3"><span class="u">3</span><span>Chemical Bonding and Molecular Structure</span></a><a href="#/c/chem/4"><span class="u">4</span><span>Chemical Thermodynamics</span></a><a href="#/c/chem/5"><span class="u">5</span><span>Solutions</span></a><a href="#/c/chem/6"><span class="u">6</span><span>Equilibrium</span></a><a href="#/c/chem/7"><span class="u">7</span><span>Redox Reactions and Electrochemistry</span></a><a href="#/c/chem/8"><span class="u">8</span><span>Chemical Kinetics</span></a><a href="#/c/chem/9"><span class="u">9</span><span>Classification of Elements and Periodicity in Properties</span></a><a href="#/c/chem/10"><span class="u">10</span><span>p-Block Elements</span></a><a href="#/c/chem/11"><span class="u">11</span><span>d- and f-Block Elements</span></a><a href="#/c/chem/12"><span class="u">12</span><span>Coordination Compounds</span></a><a href="#/c/chem/13"><span class="u">13</span><span>Purification and Characterisation of Organic Compounds</span></a><a href="#/c/chem/14"><span class="u">14</span><span>Some Basic Principles of Organic Chemistry</span></a><a href="#/c/chem/15"><span class="u">15</span><span>Hydrocarbons</span></a><a href="#/c/chem/16"><span class="u">16</span><span>Organic Compounds Containing Halogens</span></a><a href="#/c/chem/17"><span class="u">17</span><span>Organic Compounds Containing Oxygen</span></a><a href="#/c/chem/18"><span class="u">18</span><span>Organic Compounds Containing Nitrogen</span></a><a href="#/c/chem/19"><span class="u">19</span><span>Biomolecules</span></a><a href="#/c/chem/20"><span class="u">20</span><span>Principles Related to Practical Chemistry</span></a>
+      </details>
+      <details><summary>MATHEMATICS</summary>
+        <a href="#/c/math/1"><span class="u">1</span><span>Sets, Relations and Functions</span></a><a href="#/c/math/2"><span class="u">2</span><span>Complex Numbers and Quadratic Equations</span></a><a href="#/c/math/3"><span class="u">3</span><span>Matrices and Determinants</span></a><a href="#/c/math/4"><span class="u">4</span><span>Permutations and Combinations</span></a><a href="#/c/math/5"><span class="u">5</span><span>Binomial Theorem and its Simple Applications</span></a><a href="#/c/math/6"><span class="u">6</span><span>Sequence and Series</span></a><a href="#/c/math/7"><span class="u">7</span><span>Limit, Continuity and Differentiability</span></a><a href="#/c/math/8"><span class="u">8</span><span>Integral Calculus</span></a><a href="#/c/math/9"><span class="u">9</span><span>Differential Equations</span></a><a href="#/c/math/10"><span class="u">10</span><span>Co-ordinate Geometry</span></a><a href="#/c/math/11"><span class="u">11</span><span>Three Dimensional Geometry</span></a><a href="#/c/math/12"><span class="u">12</span><span>Vector Algebra</span></a><a href="#/c/math/13"><span class="u">13</span><span>Statistics and Probability</span></a><a href="#/c/math/14"><span class="u">14</span><span>Trigonometry</span></a>
+      </details><details><summary>MORE</summary>
+        <a href="#/revise"><span class="u">⚡</span><span>Quick revision</span></a>
+        <a href="#/recent"><span class="u">↺</span><span>Recently viewed</span></a>
+        <a href="#/progress"><span class="u">✓</span><span>My progress</span></a>
+      </details></div>
+  </aside>
+
+  <main id="app" tabindex="-1"><section class="hero-wrap"><div class="hero">
+      <a class="hero-tile" href="#/s/physics" style="--tint:#3a4f7a">
+        <div class="watermark" aria-hidden="true">F = ma   v² = u² + 2as   pV = nRT   E = hν   T = 2π√(l/g)   ∮E·dS = q/ε₀   λ = h/p   1/v − 1/u = 1/fF = ma   v² = u² + 2as   pV = nRT   E = hν   T = 2π√(l/g)   ∮E·dS = q/ε₀   λ = h/p   1/v − 1/u = 1/fF = ma   v² = u² + 2as   pV = nRT   E = hν   T = 2π√(l/g)   ∮E·dS = q/ε₀   λ = h/p   1/v − 1/u = 1/fF = ma   v² = u² + 2as   pV = nRT   E = hν   T = 2π√(l/g)   ∮E·dS = q/ε₀   λ = h/p   1/v − 1/u = 1/fF = ma   v² = u² + 2as   pV = nRT   E = hν   T = 2π√(l/g)   ∮E·dS = q/ε₀   λ = h/p   1/v − 1/u = 1/fF = ma   v² = u² + 2as   pV = nRT   E = hν   T = 2π√(l/g)   ∮E·dS = q/ε₀   λ = h/p   1/v − 1/u = 1/fF = ma   v² = u² + 2as   pV = nRT   E = hν   T = 2π√(l/g)   ∮E·dS = q/ε₀   λ = h/p   1/v − 1/u = 1/fF = ma   v² = u² + 2as   pV = nRT   E = hν   T = 2π√(l/g)   ∮E·dS = q/ε₀   λ = h/p   1/v − 1/u = 1/f</div>
+        <span class="hero-label">PHYSICS</span>
+        <div class="hero-meta">20 CHAPTERS · 400 FORMULAS</div>
+      </a>
+      <a class="hero-tile" href="#/s/chem" style="--tint:#2f6b57">
+        <div class="watermark" aria-hidden="true">pH = −log[H⁺]   ΔG = ΔH − TΔS   Kp = Kc(RT)^Δn   E = −13.6/n²   λ = h/mv   ΔU = q + w   M₁V₁ = M₂V₂pH = −log[H⁺]   ΔG = ΔH − TΔS   Kp = Kc(RT)^Δn   E = −13.6/n²   λ = h/mv   ΔU = q + w   M₁V₁ = M₂V₂pH = −log[H⁺]   ΔG = ΔH − TΔS   Kp = Kc(RT)^Δn   E = −13.6/n²   λ = h/mv   ΔU = q + w   M₁V₁ = M₂V₂pH = −log[H⁺]   ΔG = ΔH − TΔS   Kp = Kc(RT)^Δn   E = −13.6/n²   λ = h/mv   ΔU = q + w   M₁V₁ = M₂V₂pH = −log[H⁺]   ΔG = ΔH − TΔS   Kp = Kc(RT)^Δn   E = −13.6/n²   λ = h/mv   ΔU = q + w   M₁V₁ = M₂V₂pH = −log[H⁺]   ΔG = ΔH − TΔS   Kp = Kc(RT)^Δn   E = −13.6/n²   λ = h/mv   ΔU = q + w   M₁V₁ = M₂V₂pH = −log[H⁺]   ΔG = ΔH − TΔS   Kp = Kc(RT)^Δn   E = −13.6/n²   λ = h/mv   ΔU = q + w   M₁V₁ = M₂V₂pH = −log[H⁺]   ΔG = ΔH − TΔS   Kp = Kc(RT)^Δn   E = −13.6/n²   λ = h/mv   ΔU = q + w   M₁V₁ = M₂V₂</div>
+        <span class="hero-label">CHEMISTRY</span>
+        <div class="hero-meta">20 CHAPTERS · 413 FORMULAS &amp; REACTIONS</div>
+      </a>
+      <a class="hero-tile" href="#/s/math" style="--tint:#7a3a3a">
+        <div class="watermark" aria-hidden="true">∫ eˣ dx = eˣ + C   A⁻¹ = adj A / |A|   a·b = |a||b|cosθ   P(E|F) = P(E∩F)/P(F)   dy/dx + Py = Q∫ eˣ dx = eˣ + C   A⁻¹ = adj A / |A|   a·b = |a||b|cosθ   P(E|F) = P(E∩F)/P(F)   dy/dx + Py = Q∫ eˣ dx = eˣ + C   A⁻¹ = adj A / |A|   a·b = |a||b|cosθ   P(E|F) = P(E∩F)/P(F)   dy/dx + Py = Q∫ eˣ dx = eˣ + C   A⁻¹ = adj A / |A|   a·b = |a||b|cosθ   P(E|F) = P(E∩F)/P(F)   dy/dx + Py = Q∫ eˣ dx = eˣ + C   A⁻¹ = adj A / |A|   a·b = |a||b|cosθ   P(E|F) = P(E∩F)/P(F)   dy/dx + Py = Q∫ eˣ dx = eˣ + C   A⁻¹ = adj A / |A|   a·b = |a||b|cosθ   P(E|F) = P(E∩F)/P(F)   dy/dx + Py = Q∫ eˣ dx = eˣ + C   A⁻¹ = adj A / |A|   a·b = |a||b|cosθ   P(E|F) = P(E∩F)/P(F)   dy/dx + Py = Q∫ eˣ dx = eˣ + C   A⁻¹ = adj A / |A|   a·b = |a||b|cosθ   P(E|F) = P(E∩F)/P(F)   dy/dx + Py = Q</div>
+        <span class="hero-label">MATHS</span>
+        <div class="hero-meta">14 CHAPTERS · 350 FORMULAS</div>
+      </a></div></section></main>
+
+  <footer class="site-footer">
+    <div class="footer-cols" id="footerCols"><div><h5>PHYSICS</h5><a href="#/c/physics/1">Units and Measurements</a><a href="#/c/physics/2">Kinematics</a><a href="#/c/physics/3">Laws of Motion</a><a href="#/c/physics/4">Work, Energy and Power</a><a href="#/c/physics/5">Rotational Motion</a><a class="more" href="#/s/physics">View More</a></div><div><h5>CHEMISTRY</h5><a href="#/c/chem/1">Some Basic Concepts in Chemistry</a><a href="#/c/chem/2">Atomic Structure</a><a href="#/c/chem/3">Chemical Bonding and Molecular Structure</a><a href="#/c/chem/4">Chemical Thermodynamics</a><a href="#/c/chem/5">Solutions</a><a class="more" href="#/s/chem">View More</a></div><div><h5>MATHEMATICS</h5><a href="#/c/math/1">Sets, Relations and Functions</a><a href="#/c/math/2">Complex Numbers and Quadratic Equations</a><a href="#/c/math/3">Matrices and Determinants</a><a href="#/c/math/4">Permutations and Combinations</a><a href="#/c/math/5">Binomial Theorem and its Simple Applications</a><a class="more" href="#/s/math">View More</a></div><div><h5>MORE INFO</h5><a href="#/revise">Quick Revision</a><a href="#/recent">Recently Viewed</a><a href="#/progress">My Progress</a><a href="#/">Home</a></div></div>
+    <div class="footer-note">
+      <p><b>SOURCES</b> · H C Verma, <i>Concepts of Physics</i> Vol 1 &amp; 2 · NCERT Mathematics XII Part I &amp; II · NCERT Chemistry XI Part I &amp; XII Part II</p>
+      <p>Structure follows the official JEE (Main) syllabus.</p>
+    </div>
+  </footer>
+
+  <!-- Search palette (⌘K or type in the header search) -->
+  <div class="palette" id="palette" hidden="" role="dialog" aria-modal="true" aria-label="Search formulas">
+    <div class="palette-box">
+      <div class="palette-input">
+        <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"></circle><path d="M15.5 15.5 20 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+        <input id="paletteInput" type="search" placeholder="Search chapters, topics, or formulas..." autocomplete="off" aria-label="Search">
+        <kbd>Esc</kbd>
+      </div>
+      <div class="palette-results" id="paletteResults" role="listbox"></div>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden=""></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script src="data/physics.js"></script>
+  <script src="data/chem.js"></script>
+  <script src="data/math.js"></script>
+  <script src="data/supplement-physics.js"></script>
+  <script src="data/supplement-chem.js"></script>
+  <script src="data/supplement-math.js"></script>
+  <script src="data/reactions-chem.js"></script>
+  <script src="app.js"></script>
+
+
+</body></html>
