@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JEE Formula Sheet</title>
+  <meta name="description" content="JEE Main formula and reaction repository organised by the official syllabus: subject, chapter, topic, formula." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header: hamburger + category nav | centred logo | pill search + icons (mirrors the original UI reference) -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <button class="icon-btn hamburger" id="menuBtn" aria-label="Open chapter menu" aria-controls="drawer" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="cat-nav" aria-label="Subjects">
+          <a href="#/s/physics" data-subject="physics">PHYSICS</a>
+          <a href="#/s/chem" data-subject="chem">CHEMISTRY</a>
+          <a href="#/s/math" data-subject="math">MATHS</a>
+        </nav>
+      </div>
+      <a class="logo" href="#/" aria-label="JEE Formula Sheet — home">
+        <span class="logo-mark" aria-hidden="true">∑</span>
+        <span class="logo-text"><b>JEE</b><i>Formula</i><b>Sheet</b></span>
+      </a>
+      <div class="header-right">
+        <form class="search" id="searchForm" role="search">
+          <input id="searchInput" type="search" placeholder="Search chapters, topics, or formulas..." autocomplete="off" aria-label="Search formulas" />
+          <button type="submit" class="search-go" aria-label="Search">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- Slide-out drawer (hamburger) -->
+  <div class="drawer-scrim" id="scrim" hidden></div>
+  <aside class="drawer" id="drawer" aria-label="All chapters" aria-hidden="true">
+    <div class="drawer-head">
+      <span>ALL CHAPTERS</span>
+      <button class="icon-btn" id="drawerClose" aria-label="Close menu">✕</button>
+    </div>
+    <div id="drawerBody"></div>
+  </aside>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="site-footer">
+    <div class="footer-cols" id="footerCols"></div>
+    <div class="footer-note">
+      <p><b>SOURCES</b> · H C Verma, <i>Concepts of Physics</i> Vol 1 &amp; 2 · NCERT Mathematics XII Part I &amp; II · NCERT Chemistry XI Part I &amp; XII Part II</p>
+      <p>Structure follows the official JEE (Main) syllabus.</p>
+    </div>
+  </footer>
+
+  <!-- Search palette (⌘K or type in the header search) -->
+  <div class="palette" id="palette" hidden role="dialog" aria-modal="true" aria-label="Search formulas">
+    <div class="palette-box">
+      <div class="palette-input">
+        <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 20 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="paletteInput" type="search" placeholder="Search chapters, topics, or formulas..." autocomplete="off" aria-label="Search" />
+        <kbd>Esc</kbd>
+      </div>
+      <div class="palette-results" id="paletteResults" role="listbox"></div>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script src="data/physics.js"></script>
+  <script src="data/chem.js"></script>
+  <script src="data/math.js"></script>
+  <script src="data/supplement-physics.js"></script>
+  <script src="data/supplement-chem.js"></script>
+  <script src="data/supplement-math.js"></script>
+  <script src="data/reactions-chem.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
